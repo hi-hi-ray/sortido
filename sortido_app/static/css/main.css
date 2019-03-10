@@ -1,0 +1,14 @@
+h1 {
+    color: #545454;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+nav img {
+    margin-top: 0;
+    padding: 0;
+    height: 176%;
+    width: 10%;
+}
