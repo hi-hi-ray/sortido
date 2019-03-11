@@ -2,13 +2,36 @@ h1 {
     color: #545454;
 }
 
-nav a {
+nav a, nav a:hover, nav a:visited {
     color: #ffffff;
+    text-decoration: none;
+}
+
+nav .navbar-brand{
+  margin-bottom: 2%;
+  letter-spacing: 0.1em;
 }
 
 nav img {
     margin-top: 0;
     padding: 0;
-    height: 176%;
+    height: 235%;
     width: 10%;
+}
+
+nav .nav.pull-right {
+  margin-right: 2%;
+  margin-top: 3%;
+}
+
+nav .nav.pull-right a {
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  margin-right: 0.10px;
+  text-decoration: none;
+}
+
+nav .nav.pull-right a:hover {
+  text-decoration: none;
+  font-weight: bold;
 }
