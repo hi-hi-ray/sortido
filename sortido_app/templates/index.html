@@ -11,15 +11,16 @@
 
   <body>
     <nav class="navbar fixed-top navbar-light" style="background-color: #545454;">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="{% static 'img/logo.png' %}" class="d-inline-block align-top" alt="Logo que possui vários trevos">
         SORTIDO!
       </a>
 
-        <div class="nav pull-right">
-          <a class="nav-item nav-link" href="#">CSV</a>
-          <a class="nav-item nav-link" href="#">Número</a>
-        </div>
+      <div class="nav pull-right">
+        <a class="nav-item nav-link" href="csv">CSV</a>
+        <p class="divisor-pipe"> | </p>
+        <a class="nav-item nav-link" href="#">Número</a>
+      </div>
     </nav>
 
     <div class="container">
@@ -38,7 +39,7 @@
               <div class="card-body">
                 <h5 class="card-title">Sorteando com CSV</h5>
                 <p class="card-text">Suba um arquivo CSV passando os parâmetros necessários que realizaremos o sorteio, indicando os ganhadores.</p>
-                <a href="#" class="btn btn-success">Quero essa opção!</a>
+                <a href="csv" class="btn btn-success">Quero essa opção!</a>
               </div>
             </div>
           </div>

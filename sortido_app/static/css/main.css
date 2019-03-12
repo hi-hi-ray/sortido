@@ -30,6 +30,12 @@ nav .nav.pull-right a {
   text-decoration: none;
 }
 
+nav .nav.pull-right p.divisor-pipe{
+  color: #ffffffff;
+  font-size: 1.3em;
+  display: inline-block;
+}
+
 nav .nav.pull-right a:hover {
   text-decoration: none;
   font-weight: bold;
