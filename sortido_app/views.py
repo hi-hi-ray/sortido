@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .forms import *
+
 
 def home(request):
     return render(request, 'index.html', {})
