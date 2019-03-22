@@ -11,22 +11,42 @@
 
 <body>
   <nav class="navbar fixed-top navbar-light" style="background-color: #545454;">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <img src="{% static 'img/logo.png' %}" class="d-inline-block align-top" alt="Logo que possui vários trevos">
-      SORTIDO
+      SORTIDO!
     </a>
 
-      <div class="nav pull-right">
-        <a class="nav-item nav-link" href="#">Home</a>
-        <a class="nav-item nav-link" href="#">CSV</a>
-        <a class="nav-item nav-link" href="#">Número</a>
-      </div>
+    <div class="nav pull-right">
+      <a class="nav-item nav-link" href="csv">CSV</a>
+      <p class="divisor-pipe"> | </p>
+      <a class="nav-item nav-link" href="numbers">Número</a>
+      <p class="divisor-pipe"> | </p>
+      <a class="nav-item nav-link" href="about">Sobre</a>
+    </div>
   </nav>
 
   <div class="container">
-
-    
-
+    <div class="jumbotron">
+      <h1 class="display-4">Sorteio de números</h1>
+      <p class="lead">Sorteie os seus números quantas vezes desejar, em um único clique.</p>
+      <hr class="my-4">
+      <p>Instruções:</p>
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="numberOfTimes">Digite o número de vezes:</label>
+        <input type="number" class="form-control" id="numberOfTimes" placeholder="Coloque o número">
+      </div>
+      <div class="form-group">
+        <label for="numberOfTimes">De: </label>
+        <input type="number" class="form-control" id="numberOfTimes" placeholder="Coloque o número mínimo">
+      </div>
+      <div class="form-group">
+        <label for="numberOfTimes">Até: </label>
+        <input type="number" class="form-control" id="numberOfTimes" placeholder="Coloque o número máximo">
+      </div>
+      <button type="submit" class="btn btn-primary">Sortear</button>
+    </form>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
