@@ -59,3 +59,8 @@ body {
   margin-right: 0px;
   margin-left: 0px;
 }
+
+.jumbotron.random_response{
+  background-color: #e4fee4;
+  border-radius: 0px;
+}
