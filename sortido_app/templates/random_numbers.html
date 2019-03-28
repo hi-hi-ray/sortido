@@ -32,21 +32,31 @@
       <hr class="my-4">
       <p>Instruções:</p>
     </div>
-    <form>
-      <div class="form-group">
-        <label for="numberOfTimes">Digite o número de vezes:</label>
-        <input type="number" class="form-control" id="numberOfTimes" placeholder="Coloque o número">
-      </div>
-      <div class="form-group">
-        <label for="numberOfTimes">De: </label>
-        <input type="number" class="form-control" id="numberOfTimes" placeholder="Coloque o número mínimo">
-      </div>
-      <div class="form-group">
-        <label for="numberOfTimes">Até: </label>
-        <input type="number" class="form-control" id="numberOfTimes" placeholder="Coloque o número máximo">
-      </div>
-      <button type="submit" class="btn btn-primary">Sortear</button>
-    </form>
+
+    <form method="POST" enctype="multipart/form-data" class="form-horizontal">
+       {% csrf_token %}
+       <div class="total-form">
+         {% for field in form %}
+         <div class="form-group">
+             {{ field.label_tag }} {{ field }}
+             {{ field.errors }}
+         </div>
+         {% endfor %}
+         <button type="submit" class="btn btn-primary">Sortear</button>
+       </div>
+     </form>
+
+     {% if random_done %}
+     <div class="jumbotron random_response">
+       <h2 class="display-4">Sorteados</h2>
+       <p class="lead">Veja os sortudos.</p>
+       <hr class="my-4">
+       {% for number in form_result %}
+       <p>{{ number }}</p>
+       {% endfor %}
+     </div>
+     {% endif %}
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
