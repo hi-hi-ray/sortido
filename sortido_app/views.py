@@ -19,5 +19,8 @@ def random_csv(request):
             file_path = os.path.join(settings.BASE_DIR, file_reference)
             return render(request, 'random_csv.html',  {'form': form, 'random_done': True})
 
-def random_number(request):
-    return render(request, 'random_number.html', {})
+def random_numbers(request):
+    return render(request, 'random_numbers.html', {})
+
+def about(request):
+    return render(request, 'about.html', {})
