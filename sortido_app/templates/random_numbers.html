@@ -31,6 +31,9 @@
       <p class="lead">Sorteie os seus números quantas vezes desejar, em um único clique.</p>
       <hr class="my-4">
       <p>Instruções:</p>
+      <p>- A quantidade de vezes que será feito o sorteio deverá ser maior que 1:</p>
+      <p>- Você pode escolher entre ter números repetidos ou não</p>
+      <p>- O primeiro número (De) deve ser maior do que o segundo número (Até)</p>
     </div>
 
     <form method="POST" enctype="multipart/form-data" class="form-horizontal">
@@ -45,6 +48,17 @@
          <button type="submit" class="btn btn-primary">Sortear</button>
        </div>
      </form>
+
+     {% if validation_fail %}
+     <div class="jumbotron validation_fail">
+       <h4 class="display-4">Poxa! Deu erro.</h4>
+       <p class="lead">Verifique o que deu de errado no seu sorteio.</p>
+       <hr class="my-4">
+       {% for error in errors_message %}
+       <p>{{ error }}</p>
+       {% endfor %}
+     </div>
+     {% endif %}
 
      {% if random_done %}
      <div class="jumbotron random_response">

@@ -29,13 +29,21 @@ def random_numbers(request):
             first_number = int(request.POST['first_number'])
             second_number = int(request.POST['second_number'])
             is_possible_same_number = request.POST.get('is_possible_same_number', False)
+            errors_message = []
             numbers_of_results = []
             i = 0
 
-            if first_number <= second_number:
-                pass
-            elif (second_number - first_number) > quantity_random:
-                pass
+            if quantity_random <= 0:
+                errors_message.append('A quantidade de sorteio não pode ser menor do que 1.')
+
+            if first_number >= second_number:
+                errors_message.append('O segundo número (Até) não pode ser menor que o primeiro número (De).')
+
+            if ((second_number - first_number) + 1) < quantity_random and is_possible_same_number is False:
+                errors_message.append('Você não marcou que deseja repetir os números e a quantidade de números entre um e outro não é suficiente para conseguirmos fazer um sorteio de números diferentes. Por favor reveja a sua solicitação.')
+
+            if len(errors_message) != 0:
+                return render(request, 'random_numbers.html', {'form': form, 'validation_fail': True, 'errors_message': errors_message})
 
             if is_possible_same_number:
                 for i in range(quantity_random):
