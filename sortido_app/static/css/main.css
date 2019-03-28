@@ -49,3 +49,23 @@ nav .nav.pull-right a:hover {
 body {
   background-color: #fbfbfbfb;
 }
+
+.total-form {
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+.form-horizontal .form-group{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.jumbotron.validation_fail{
+  background-color: #e07f7f;
+  border-radius: 0px;
+}
+
+.jumbotron.random_response{
+  background-color: #e4fee4;
+  border-radius: 0px;
+}
