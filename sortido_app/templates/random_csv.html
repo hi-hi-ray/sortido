@@ -45,12 +45,14 @@
         </div>
       </form>
 
-      {% if random_done%}
+      {% if random_done %}
       <div class="jumbotron random_response">
         <h2 class="display-4">Sorteados</h2>
         <p class="lead">Veja os sortudos.</p>
         <hr class="my-4">
-        <p></p>
+        {% for person in oi  %}
+        <p>{{ person }}</p>
+        {% endfor %}
       </div>
       {% endif %}
 

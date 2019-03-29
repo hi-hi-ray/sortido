@@ -7,6 +7,7 @@ class RandomNumbersForm(forms.Form):
     first_number = forms.IntegerField(label='De', required=True)
     second_number = forms.IntegerField(label='Até', required=True)
 
+
 class UploadFileForm(forms.Form):
     number_of_times = forms.IntegerField(label='Quantidade de Pessoas', required=True)
     csv_file = forms.FileField(label='Arquivo CSV', required=True)
