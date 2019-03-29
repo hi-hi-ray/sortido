@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+  <title>Sortido</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-light" style="background-color: #545454;">
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'img/logo.png' %}" class="d-inline-block align-top" alt="Logo que possui vários trevos">
+      SORTIDO!
+    </a>
+
+    <div class="nav pull-right">
+      <a class="nav-item nav-link" href="csv">CSV</a>
+      <p class="divisor-pipe"> | </p>
+      <a class="nav-item nav-link" href="numbers">Número</a>
+      <p class="divisor-pipe"> | </p>
+      <a class="nav-item nav-link" href="about">Sobre</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Sorteio de números</h1>
+      <p class="lead">Sorteie os seus números quantas vezes desejar, em um único clique.</p>
+      <hr class="my-4">
+      <p>Instruções:</p>
+      <p>- A quantidade de vezes que será feito o sorteio deverá ser maior que 1:</p>
+      <p>- Você pode escolher entre ter números repetidos ou não</p>
+      <p>- O primeiro número (De) deve ser maior do que o segundo número (Até)</p>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data" class="form-horizontal">
+       {% csrf_token %}
+       <div class="total-form">
+         {% for field in form %}
+         <div class="form-group">
+             {{ field.label_tag }} {{ field }}
+             {{ field.errors }}
+         </div>
+         {% endfor %}
+         <button type="submit" class="btn btn-primary">Sortear</button>
+       </div>
+     </form>
+
+     {% if validation_fail %}
+     <div class="jumbotron validation_fail">
+       <h4 class="display-4">Poxa! Deu erro.</h4>
+       <p class="lead">Verifique o que deu de errado no seu sorteio.</p>
+       <hr class="my-4">
+       {% for error in errors_message %}
+       <p>{{ error }}</p>
+       {% endfor %}
+     </div>
+     {% endif %}
+
+     {% if random_done %}
+     <div class="jumbotron random_response">
+       <h2 class="display-4">Sorteados</h2>
+       <p class="lead">Veja os sortudos.</p>
+       <hr class="my-4">
+       {% for number in form_result %}
+       <p>{{ number }}</p>
+       {% endfor %}
+     </div>
+     {% endif %}
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
