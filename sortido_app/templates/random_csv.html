@@ -19,7 +19,11 @@
         <div class="nav pull-right">
           <a class="nav-item nav-link" href="csv">CSV</a>
           <p class="divisor-pipe"> | </p>
-          <a class="nav-item nav-link" href="#">Número</a>
+          <a class="nav-item nav-link" href="numbers">Número</a>
+          <p class="divisor-pipe"> | </p>
+          <a class="nav-item nav-link" href="meetup">Meetup</a>
+          <p class="divisor-pipe"> | </p>
+          <a class="nav-item nav-link" href="about">Sobre</a>
         </div>
     </nav>
 
@@ -30,6 +34,9 @@
         <p class="lead">Sorteie os seus mimos a partir de um arquivo CSV.</p>
         <hr class="my-4">
         <p>Instruções:</p>
+        <p>- A quantidade de vezes que será feito o sorteio deverá ser maior que 1.</p>
+        <p>- O arquivo CSV deve ter apenas uma coluna e ela deve ser a primeira contendo o nome das pessoas completo.</p>
+        <p>- O arquivo CSV pode ter um header de uma única linha, porém não esqueça de marcar o check (Seu CSV possui um Header de uma linha?) para melhor resultado.</p>
       </div>
 
       <form method="POST" enctype="multipart/form-data" class="form-horizontal">
@@ -45,12 +52,25 @@
         </div>
       </form>
 
-      {% if random_done%}
+      {% if validation_fail %}
+      <div class="jumbotron validation_fail">
+        <h4 class="display-4">Poxa! Deu erro.</h4>
+        <p class="lead">Verifique o que deu de errado no seu sorteio.</p>
+        <hr class="my-4">
+        {% for error in errors_message %}
+        <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if random_done %}
       <div class="jumbotron random_response">
         <h2 class="display-4">Sorteados</h2>
         <p class="lead">Veja os sortudos.</p>
         <hr class="my-4">
-        <p></p>
+        {% for person in form_result  %}
+        <p>{{ person }}</p>
+        {% endfor %}
       </div>
       {% endif %}
 
