@@ -1,14 +1,15 @@
 from django.shortcuts import render
 from django.views.generic.edit import FormView
+from django.conf import settings
 from .forms import *
 from random import randint
 import os
+import csv
 
 
 # Route Home Page
 def home(request):
     return render(request, 'index.html', {})
-
 
 # Route Random with CSV
 def random_csv(request):
@@ -18,12 +19,56 @@ def random_csv(request):
     elif request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            number_of_times = request.POST['number_of_times']
-            print(request.FILES['csv_file'])
-            file_reference = handle_uploaded_file(request.FILES['csv_file'])
-            file_path = os.path.join(settings.TEMP_ROOT, file_reference)
-            print(file_path)
-            return render(request, form, 'random_csv.html',  {'form': form, 'random_done': True})
+            errors_message = []
+            random_persons_result = []
+            csv_rows = []
+            qtd_lines = 0
+            i = 0
+
+            number_of_times = int(request.POST['number_of_times'])
+            file_form = request.FILES['csv_file']
+            has_a_header = request.POST.get('has_a_header', False)
+
+            file_name, file_extension = os.path.splitext(file_form.name)
+
+            # Fields Treatment
+            if number_of_times <= 0:
+                errors_message.append('A quantidade de sorteio não pode ser menor do que 1.')
+            if file_extension != '.csv':
+                errors_message.append("O seu arquivo precisa ser um CSV.")
+
+
+
+            # Random CSV
+            if len(errors_message) != 0:
+                return render(request, 'random_csv.html', {'form': form, 'validation_fail': True, 'errors_message': errors_message})
+            else:
+                # Create File
+                with open("tmp/file" + file_form.name, 'wb+') as destination:
+                    for chunk in file_form.chunks():
+                        destination.write(chunk)
+                destination.close()
+                # Pass the values to a list
+                with open("tmp/file" + file_form.name, 'r') as file:
+                    for row in file:
+                        csv_rows.append(row.replace('\n', ''))
+                file.close()
+
+                # Remove File
+                os.remove("tmp/file" + file_form.name)
+
+                while i != number_of_times:
+                    chosen_person = ''
+                    if has_a_header:
+                        chosen_person = csv_rows[randint(1, len(csv_rows) - 1)]
+                    else:
+                        chosen_person = csv_rows[randint(0, len(csv_rows) - 1)]
+                    if chosen_person in random_persons_result:
+                        number_of_times += 1
+                    else:
+                        random_persons_result.append(chosen_person)
+                    i += 1
+                return render(request, 'random_csv.html', {'form': form, 'random_done': True, 'form_result': random_persons_result})
 
 # Route Random with Numbers
 def random_numbers(request):
@@ -99,18 +144,3 @@ def random_meetup(request):
             return render(request, 'random_meetup.html', { 'form' : form, 'errors_message': errors_message, 'lucky_ones' : result[0]})
         else:
             return render(request, 'random_meetup.html', { 'form' : form, 'errors_message': errors_message, 'lucky_ones' : []})
-
-
-# Functionalities
-def read_csv(csv_file):
-    pass
-
-def handle_uploaded_file(file):
-    file_name, file_extension = os.path.splitext(file.name)
-    if file_extension == '.csv':
-        with open(file.name, 'wb+') as destination:
-            for chunk in file.chunks():
-                destination.write(chunk)
-        return file.name
-    else:
-        print('Not CSV')

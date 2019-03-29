@@ -120,4 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'sortido_app/static')
-TMP_FOLDER = os.path.join(BASE_DIR, 'tmp')
+TMP_FOLDER = os.path.join(BASE_DIR, 'tmp/files')

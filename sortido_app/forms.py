@@ -38,7 +38,7 @@ class RandomNumbersForm(forms.Form):
     first_number = forms.IntegerField(label='De', required=True)
     second_number = forms.IntegerField(label='Até', required=True)
 
-
 class UploadFileForm(forms.Form):
     number_of_times = forms.IntegerField(label='Quantidade de Pessoas', required=True)
     csv_file = forms.FileField(label='Arquivo CSV', required=True)
+    has_a_header = forms.BooleanField(label='Seu CSV possui um Header de uma linha?', initial=False, required=False)
