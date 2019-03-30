@@ -1,0 +1,71 @@
+h1 {
+    color: #545454;
+}
+
+nav a, nav a:hover, nav a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav .navbar-brand{
+  margin-bottom: 2%;
+  letter-spacing: 0.1em;
+}
+
+nav img {
+    margin-top: 0;
+    padding: 0;
+    width: 10%;
+}
+
+nav .nav.pull-right {
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+nav .nav.pull-right a {
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  margin-right: 0.10px;
+  text-decoration: none;
+}
+
+nav .nav.pull-right p.divisor-pipe{
+  color: #ffffffff;
+  font-size: 1.3em;
+  display: inline-block;
+}
+
+nav .nav.pull-right a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.jumbotron {
+  background-color: #ffffffff;
+  border-radius: 10%;
+}
+
+body {
+  background-color: #fbfbfbfb;
+}
+
+.total-form {
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+.form-horizontal .form-group{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.jumbotron.validation_fail{
+  background-color: #e07f7f;
+  border-radius: 0px;
+}
+
+.jumbotron.random_response{
+  background-color: #e4fee4;
+  border-radius: 0px;
+}
