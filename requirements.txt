@@ -1,0 +1,4 @@
+Django==2.1.7
+django-heroku==0.3.1
+requests==2.21.0
+
