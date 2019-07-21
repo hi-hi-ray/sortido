@@ -1,0 +1,30 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "hi-hi-ray",
+      "name": "Raysa Dutra",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/13999149?v=4",
+      "profile": "https://hi-hi-ray.github.io",
+      "contributions": [
+        "code",
+        "projectManagement",
+        "talk",
+        "business",
+        "design",
+        "review",
+        "maintenance",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "sortido",
+  "projectOwner": "hi-hi-ray",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
