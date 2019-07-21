@@ -92,16 +92,6 @@ Para instalar o Django digite o comando abaixo:
 
 * Request - Uma biblioteca HTTP para python usada em nosso projeto
 
-## Autores
-
-* **Raysa Dutra** - [hi-hi-ray](https://github.com/hi-hi-ray)
-
-* **Herik Tedesco** - [heriktedesco](https://github.com/heriktedesco)
-
-* **Yuri Souza** - [yurisouza](https://github.com/yurisouza)
-
-* **Pedro Bastos** - [pedroppbastos](https://github.com/pedroppbastos)
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -110,8 +100,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore -->
 <table>
   <tr>
+    <td align="center"><a href="https://hi-hi-ray.github.io"><img src="https://avatars3.githubusercontent.com/u/13999149?v=4" width="100px;" alt="Raysa Dutra"/><br /><sub><b>Raysa Dutra</b></sub></a><br /><a href="https://github.com/hi-hi-ray/sortido/commits?author=hi-hi-ray" title="Code">💻</a> <a href="#projectManagement-hi-hi-ray" title="Project Management">📆</a> <a href="#talk-hi-hi-ray" title="Talks">📢</a> <a href="#business-hi-hi-ray" title="Business development">💼</a> <a href="#design-hi-hi-ray" title="Design">🎨</a> <a href="#review-hi-hi-ray" title="Reviewed Pull Requests">👀</a> <a href="#maintenance-hi-hi-ray" title="Maintenance">🚧</a> <a href="#ideas-hi-hi-ray" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/yurisouza"><img src="https://avatars0.githubusercontent.com/u/10949463?v=4" width="100px;" alt="Yuri Pereira"/><br /><sub><b>Yuri Pereira</b></sub></a><br /><a href="https://github.com/hi-hi-ray/sortido/commits?author=yurisouza" title="Code">💻</a> <a href="#talk-yurisouza" title="Talks">📢</a> <a href="https://github.com/hi-hi-ray/sortido/issues?q=author%3Ayurisouza" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/heriktedesco"><img src="https://avatars2.githubusercontent.com/u/15737700?v=4" width="100px;" alt="heriktedesco"/><br /><sub><b>heriktedesco</b></sub></a><br /><a href="https://github.com/hi-hi-ray/sortido/commits?author=heriktedesco" title="Code">💻</a> <a href="#business-heriktedesco" title="Business development">💼</a></td>
-  </tr>
+</tr>
 </table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
