@@ -1,4 +1,5 @@
 # Sortido
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 O sortido foi desenvolvido para facilitar os sorteios online, permitindo que você realize os seus sorteios de forma rápida e sem complicações.
 
@@ -100,3 +101,19 @@ Para instalar o Django digite o comando abaixo:
 * **Yuri Souza** - [yurisouza](https://github.com/yurisouza)
 
 * **Pedro Bastos** - [pedroppbastos](https://github.com/pedroppbastos)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/heriktedesco"><img src="https://avatars2.githubusercontent.com/u/15737700?v=4" width="100px;" alt="heriktedesco"/><br /><sub><b>heriktedesco</b></sub></a><br /><a href="https://github.com/hi-hi-ray/sortido/commits?author=heriktedesco" title="Code">💻</a> <a href="#business-heriktedesco" title="Business development">💼</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
