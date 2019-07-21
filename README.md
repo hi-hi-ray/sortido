@@ -110,7 +110,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/yurisouza"><img src="https://avatars0.githubusercontent.com/u/10949463?v=4" width="100px;" alt="Yuri Pereira"/><br /><sub><b>Yuri Pereira</b></sub></a><br /><a href="https://github.com/hi-hi-ray/sortido/commits?author=yurisouza" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/yurisouza"><img src="https://avatars0.githubusercontent.com/u/10949463?v=4" width="100px;" alt="Yuri Pereira"/><br /><sub><b>Yuri Pereira</b></sub></a><br /><a href="https://github.com/hi-hi-ray/sortido/commits?author=yurisouza" title="Code">💻</a> <a href="#talk-yurisouza" title="Talks">📢</a></td>
   </tr>
 </table>
 
