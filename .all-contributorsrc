@@ -38,6 +38,15 @@
         "code",
         "business"
         ]
+    }, {
+    "login": "pedroppbastos",
+      "name": "Pedro Paulo P Bastos",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33101241?v=4",
+      "profile": "https://github.com/pedroppbastos",
+      "contributions": [
+        "business",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
