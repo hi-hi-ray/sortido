@@ -29,6 +29,15 @@
         "talk",
         "bug"
       ]
+    }, {
+    "login": "heriktedesco",
+      "name": "heriktedesco",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/15737700?v=4",
+      "profile": "https://github.com/heriktedesco",
+      "contributions": [
+        "code",
+        "business"
+        ]
     }
   ],
   "contributorsPerLine": 7,
