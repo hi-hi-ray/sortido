@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "pedroppbastos",
+      "name": "Pedro Paulo P Bastos",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33101241?v=4",
+      "profile": "https://github.com/pedroppbastos",
+      "contributions": [
+        "business",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "sortido",
+  "projectOwner": "hi-hi-ray",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
