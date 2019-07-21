@@ -1,5 +1,5 @@
 # Sortido
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
 O sortido foi desenvolvido para facilitar os sorteios online, permitindo que você realize os seus sorteios de forma rápida e sem complicações.
 
