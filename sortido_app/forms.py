@@ -16,20 +16,23 @@ class MeetupForm(forms.Form):
         error_msg = ""
 
         if r.status_code == requests.codes.ok:
-            members = r.json()
-
-            if numberForSorted > len(members):
-                error_msg = "Você não pode sortear mais pessoas que o evento possui"
-            elif  len(members) == 0:
+            allMembers = r.json()
+            checkedMembers = []
+            for member in allMembers:
+                if(member.get('rsvp', {}).get('response')=='yes'):
+                    checkedMembers.append(member)
+            
+            if numberForSorted > len(checkedMembers):
+                error_msg = "O evento possui "+ str(len(checkedMembers)) +" pessoas confirmadas. Você não pode sortear mais pessoas que o evento possui "
+            elif  len(checkedMembers) == 0:
                 error_msg = "Não há pessoas confirmadas no evento"
             else:
                 while(numberForSorted != len(names)):
-                    numberRandom = randint(0,len(members)-1)
-                    name = members[numberRandom].get('member', {}).get('name')
+                    numberRandom = randint(0,len(checkedMembers)-1)
+                    name = checkedMembers[numberRandom].get('member', {}).get('name')
                     names.add(name)
         else:
             error_msg = "Informe uma URL válida"
-
         return (names, error_msg)
 
 class RandomNumbersForm(forms.Form):
