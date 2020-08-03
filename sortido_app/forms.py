@@ -17,14 +17,15 @@ class MeetupForm(forms.Form):
 
         if r.status_code == requests.codes.ok:
             members = r.json()
+            print(members)
 
             if numberForSorted > len(members):
                 error_msg = "Você não pode sortear mais pessoas que o evento possui"
-            elif  len(members) == 0:
+            elif len(members) == 0:
                 error_msg = "Não há pessoas confirmadas no evento"
             else:
                 while(numberForSorted != len(names)):
-                    numberRandom = randint(0,len(members)-1)
+                    numberRandom = randint(0, len(members) -1)
                     name = members[numberRandom].get('member', {}).get('name')
                     names.add(name)
         else:
