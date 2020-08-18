@@ -1,53 +1,54 @@
-h1 {
-    color: #545454;
+body {
+  background-color: #053319;
+  margin: 0px;
 }
 
-nav a, nav a:hover, nav a:visited {
-    color: #ffffff;
-    text-decoration: none;
+header {
+  background-color: #ffffffff;
+  width: 100%;
+  height: 70px;
 }
 
-nav .navbar-brand{
-  margin-bottom: 2%;
-  letter-spacing: 0.1em;
-}
-
-nav img {
-    margin-top: 0;
-    padding: 0;
-    width: 10%;
-}
-
-nav .nav.pull-right {
-  margin-right: 2%;
-  margin-top: 2%;
-}
-
-nav .nav.pull-right a {
-  font-size: 1.3em;
-  letter-spacing: 0.1em;
-  margin-right: 0.10px;
+nav a, nav a:visited {
+  color: #008037;
+  font-weight: bolder;
   text-decoration: none;
 }
 
-nav .nav.pull-right p.divisor-pipe{
-  color: #ffffffff;
-  font-size: 1.3em;
-  display: inline-block;
+nav a:hover {
+    color: #264b27;
+    text-decoration: underline;
+    font-weight: bolder;
 }
 
-nav .nav.pull-right a:hover {
-  text-decoration: none;
-  font-weight: bold;
+ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 18px;
+  justify-content: flex-end;
+  margin: 0px;
 }
 
+li {
+   margin-top: 20px;
+   margin-right: 3%;
+ }
+
+.logo {
+  margin-right: 50%;
+  margin-top: 0;
+}
+
+
+
+/*
 .jumbotron {
   background-color: #ffffffff;
   border-radius: 10%;
 }
 
-body {
-  background-color: #fbfbfbfb;
+h1 {
+    color: #545454;
 }
 
 .total-form {
@@ -68,4 +69,4 @@ body {
 .jumbotron.random_response{
   background-color: #e4fee4;
   border-radius: 0px;
-}
+} */
